@@ -130,3 +130,53 @@ body {
     color: var(--light-gray);
     font-size: 14px;
 }
+/* --- Media Query برای دستگاه‌های موبایل و تبلت‌های کوچک (عرض کمتر از ۷۶۸ پیکسل) --- */
+@media (max-width: 768px) {
+    
+    /* تنظیمات عمومی و پدینگ */
+    .header {
+        padding: 15px 20px;
+    }
+
+    /* --- سربرگ --- */
+    .header {
+        flex-direction: column; /* آیتم‌ها زیر هم قرار بگیرند */
+        gap: 10px;
+    }
+
+    .nav ul {
+        justify-content: center; /* منو در وسط قرار گیرد */
+        padding-inline-start: 0; /* حذف پدینگ پیش‌فرض */
+    }
+    
+    .nav ul li a {
+        margin: 0 10px; /* فاصله بین آیتم‌های منو کمتر شود */
+    }
+
+    /* --- بخش اصلی (Hero Section) --- */
+    .hero-section {
+        flex-direction: column; /* عکس و متن زیر هم قرار بگیرند */
+        min-height: auto; /* ارتفاع از حالت ثابت خارج شود */
+        padding: 40px 20px; /* پدینگ اطراف کاهش یابد */
+        text-align: center; /* متن‌ها وسط‌چین شوند */
+    }
+
+    .content-box {
+        max-width: 100%; /* جعبه محتوا کل عرض را بگیرد */
+        order: 2; /* متن بعد از عکس بیاید (بخش بعدی) */
+    }
+    
+    /* کوچک کردن عنوان اصلی */
+    .main-title {
+        font-size: 36px; /* اندازه ثابت و مناسب برای موبایل */
+        margin-bottom: 20px;
+    }
+    
+    /* --- عکس (Photo) --- */
+    .photo-container {
+        width: 250px; /* اندازه عکس کوچک‌تر شود */
+        height: 250px;
+        order: 1; /* عکس قبل از متن بیاید (بخش اول) */
+        margin-bottom: 30px; /* فاصله از متن ایجاد شود */
+    }
+}
