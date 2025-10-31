@@ -1,0 +1,132 @@
+/* فونت و تنظیمات کلی */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap'); /* استفاده از فونت فارسی شیک */
+
+:root {
+    --navy-blue: #0A1931;    /* سرمه‌ای عمیق برای پس‌زمینه اصلی */
+    --gold-accent: #FFD700;  /* طلایی درخشان برای تاکید */
+    --white-text: #FFFFFF;
+    --light-gray: #E0E0E0;   /* خاکستری روشن برای جزئیات */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif; /* اعمال فونت */
+    background-color: var(--navy-blue);
+    color: var(--white-text);
+    text-align: right; /* متن از راست به چپ */
+}
+
+/* --- سربرگ (Header) --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.2); /* کمی شفافیت */
+    border-bottom: 2px solid var(--gold-accent);
+}
+
+.logo h1 {
+    color: var(--gold-accent); /* رنگ لوگو طلایی */
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li a {
+    color: var(--white-text);
+    text-decoration: none;
+    margin-right: 25px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: var(--gold-accent); /* هاور طلایی */
+}
+
+/* --- بخش اصلی (Hero Section) --- */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 50px;
+    gap: 40px; /* فاصله بین متن و عکس */
+}
+
+.content-box {
+    max-width: 50%;
+}
+
+.intro-text {
+    color: var(--light-gray);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.main-title {
+    font-size: 5vw; /* واکنشگرا */
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: var(--light-gray);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* کمی درخشش طلایی */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--gold-accent);
+    color: var(--navy-blue); /* دکمه طلایی با متن سرمه‌ای */
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: transform 0.3s, opacity 0.3s;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* --- بخش عکس --- */
+.photo-container {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%; /* دایره‌ای کردن عکس */
+    overflow: hidden;
+    border: 8px solid var(--gold-accent); /* حاشیه طلایی برای عکس */
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6); /* سایه درخشان */
+    transition: transform 0.5s;
+}
+
+.photo-container:hover {
+    transform: scale(1.05) rotate(2deg); /* کمی حرکت و چرخش در هاور */
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* مطمئن شدن از پوشش کامل ناحیه */
+    display: block;
+}
+
+/* --- پانویس (Footer) --- */
+.footer {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid rgba(255, 215, 0, 0.3);
+    color: var(--light-gray);
+    font-size: 14px;
+}
